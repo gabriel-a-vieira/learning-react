@@ -1,14 +1,15 @@
 import './App.css';
-import Evento from './components/Evento';
-import Form from './components/Form';
+import AnotherList from './components/AnotherList';
 
 function App() {
 
+  const mineItems = ['React', 'Vue', 'Angular'];
+
   return (
     <div className="App">
-      <h1>Testando Eventos</h1>
-      <Evento numero="1"/>
-      <Form />
+      <h1>Renderização de Listas</h1>
+      <AnotherList items={mineItems}/>
+      <AnotherList items={[]}/>
     </div>
   );
 
