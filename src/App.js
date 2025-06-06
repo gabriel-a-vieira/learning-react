@@ -1,12 +1,17 @@
 import './App.css';
-import Conditional from './components/Conditional';
+import { useState } from 'react';
+import YourName from './components/YourName';
+import Greeting from './components/Greeting';
 
 function App() {
 
+const [name, setName] = useState();
+
   return (
     <div className="App">
-      <h1>Renderização de Condicional</h1>
-      <Conditional />
+      <h1>State Lift</h1>
+      <YourName setName={setName}/>
+      <Greeting name={name}/>
     </div>
   );
 
